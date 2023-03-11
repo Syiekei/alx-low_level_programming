@@ -1,6 +1,5 @@
-#include "main.h"
+#include "main.h")
 #include<stdio.h>
-
 /**
  * main - Entry point
  *
@@ -8,16 +7,6 @@
  */
 int main(void)
 {
-	int i = 0;
-while (str[i])
-{
-_putchar(str[i]);
-i++;
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
-_putchar('\n');
-}
-puts("\"Programming is like building a multilingual puzzle");
-{
-return (0);
-}
-
