@@ -1,5 +1,4 @@
 #include "file.h"
-#include <stdlib.h>
 
 /**
  * main - Copies the contents of a file to another file.
