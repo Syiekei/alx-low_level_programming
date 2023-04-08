@@ -1,4 +1,6 @@
 #include "file.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 char *create_buf(char *file);
 void close_file(int fd);
@@ -73,6 +75,7 @@ int main(int argc, char *argv[])
 			free(buf);
 			exit(98);
 		}
+
 		w = write(to, buf, r);
 		if (to == -1 || w == -1)
 		{
@@ -81,13 +84,16 @@ int main(int argc, char *argv[])
 			free(buf);
 			exit(99);
 		}
+
 		r = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (r > 0);
+
 	free(buf);
 	close_file(from);
 	close_file(to);
 
 	return (0);
+
 }
